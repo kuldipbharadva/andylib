@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "377730357439",
+    "firebase_url": "https://fir-dbex-a0fbc.firebaseio.com",
+    "project_id": "fir-dbex-a0fbc",
+    "storage_bucket": "fir-dbex-a0fbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377730357439:android:75450969d12bede4",
+        "android_client_info": {
+          "package_name": "brevity.com.firebasedbex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377730357439-9pl3ct3rehsunf0ndphecbtv8t26m29b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "brevity.com.firebasedbex",
+            "certificate_hash": "be6df5eac3bb7a5d98f6cc54d2534ebe58cc28e9"
+          }
+        },
+        {
+          "client_id": "377730357439-j427b8cl699pibdgmgdlb946p7bugf9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIKiaMljMOH9QSKk7doKOPmocTwIq3gBw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377730357439-j427b8cl699pibdgmgdlb946p7bugf9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,59 @@
+{
+  "error_message": "error",
+  "html_attributions": [],
+  "next_page_token": "CqQFoAIAAFfsvJ6PiRtAWGyqq1mSS9VfuiMH_7FUVb2EggO4BH2WHcME_-oq3faVBaG2nBU_tMvKFs7PGaywZUVjh17VzW6wWs8w8XACgHaA8hZZ77VS1eQnxaHl4u7Gf_OTnJH5mKC8YmnOUzePyVjfrKZX9t-3Y3mXPGQZG7Yy_CEih1AR_XNW5bCslbU6lVetHxo0w3GDK9IVVO8RSsYIJIjA0YmNR5Oggd6X8J00cECdrORcknwbTNCOZTclkfoihCbrbtRQtOvo74O-ASprQWnybywzPko34fexnQNUk_c3rOPJlMjU8ak0mT954MQzJyXeIZeeMHxGr3l_pTDn5SQZJ8gRc_xk68bflCD0d59aWiRnTV3qE7I34ob_wr1PzDZcWPrrCeewSMzcM0fCJqJhVRJgr1HsysDZCo7zvNz22wZbse1mp_-U3xC8Kv28GuY69rIjoR9O2uzyxsOGx2OKelcHneYIxci3I_nLgLiRRW6yZUDZJ7R67sjgSB1JmCKoH5fjQKw_NE3LoY4J2wHQxECVTihu46ZfPI3f97iD-mSoxkm1h-MrGzsHsJzvtPtNabuIFjf2Pbqg5iGkzpjl-tpY081F86G1a6QI_2BCkjX4n6pdJ5oGJb6pWIO6vdqXK2r2LLMzeYZY3_ioGOw4NHwhpYMl-jrVb509YwIyQjCqIiTTw8X95U4JHp7ieA5HX6JvcbFBofiv7CQJhWWYvZQKACaBb1Y98qMmc7d5scUgxPM6Ncv9qfLuCgyJifjrcIm3MbXehLPwQ24guuz00Hpe6ygxsQn3BcXTfbgQFhEx3hVEhNf1XLI2mlvKiQniELDJXQQf6ToQ7JLq1eyiW-aA24SZ2vF-LqczkKq_2Z3W0bjCKPcom39te-s-W-E3nxIQMlUwN-y9NTRUpJ8wLkthexoUOuVwvKjWkFlaWFydH9K4_x2na9U",
+  "results": [
+    {
+      "geometry": {
+        "location": {
+          "lat": 22.291586,
+          "lng": 70.788996
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 22.2929740802915,
+            "lng": 70.7903340302915
+          },
+          "southwest": {
+            "lat": 22.29027611970849,
+            "lng": 70.78763606970848
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+      "id": "35bac76a52eaf12daf001fde2b2bab6f97bec053",
+      "name": "Apple Bite",
+      "opening_hours": {
+        "open_now": false
+      },
+      "photos": [
+        {
+          "height": 1152,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/101887669222267599246/photos\">Apple Bite</a>"
+          ],
+          "photo_reference": "CmRaAAAAu1j-Vwsp34B8xGaCYCJ7-mPWlIeKppRHj5xbp1nbl0QuUmN9J0U8fDQhcrJSqqlvnwVDaDninSVWq-ZAxCxNYqbyiohpdOmcCX12rjDaJ8taL3J4IwAl90q5HopSdwroEhAKfO6YzhzfUOeGZU_i4cVMGhTIDioFd9r1pnU2Pt6BpukxR_aC9w",
+          "width": 2048
+        }
+      ],
+      "place_id": "ChIJX6yZchjKWTkRFQkeTd2ulSc",
+      "plus_code": {
+        "compound_code": "7QRQ+JH Rajkot, Gujarat, India",
+        "global_code": "7JJG7QRQ+JH"
+      },
+      "price_level": 3,
+      "rating": 4.2,
+      "reference": "ChIJX6yZchjKWTkRFQkeTd2ulSc",
+      "scope": "GOOGLE",
+      "types": [
+        "restaurant",
+        "point_of_interest",
+        "food",
+        "establishment"
+      ],
+      "user_ratings_total": 1327,
+      "vicinity": "4 Plus Complex, Sardar Nagar Main Road, Astron Chowk, Near, Rajkot"
+    }
+  ],
+  "status": "OK"
+}

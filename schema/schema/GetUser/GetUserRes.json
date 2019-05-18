@@ -1,0 +1,36 @@
+{
+  "StatusCode": 200,
+  "StatusMessage": null,
+  "ResponseData": {
+    "Categories": [
+      {
+                "CategoriesName": "Featured",
+                "CategoriesImage1": "uploads/index.jpeg",
+                "CategoriesImage2": "uploads/image001.jpeg",
+                "CategoriesImage3": "uploads/index123.jpeg",
+                "CategoriesId": 0
+            },
+      {
+        "CategoriesName": "animal",
+        "CategoriesImage1": "2018/08/3-426x406.jpg",
+        "CategoriesImage2": "2018/08/download-6-154x154.jpeg",
+        "CategoriesImage3": "2018/08/download-9-87x112.jpeg",
+        "CategoriesId": 16
+      },
+      {
+        "CategoriesName": "fruits",
+        "CategoriesImage1": "2018/08/download-6.jpeg",
+        "CategoriesImage2": null,
+        "CategoriesImage3": null,
+        "CategoriesId": 17
+      },
+      {
+        "CategoriesName": "vegetable",
+        "CategoriesImage1": "2018/08/download-9.jpeg",
+        "CategoriesImage2": "2018/08/download-154x154.jpeg",
+        "CategoriesImage3": "2018/08/images-87x112.jpeg",
+        "CategoriesId": 18
+      }
+    ]
+  }
+}

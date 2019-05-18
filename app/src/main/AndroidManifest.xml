@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.libusage">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- this activity used for payTm payment integration and this activity comes from sdk -->
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".deeplink.DeepLinkActivity">
+            <!-- this intent-filter is used for deeplink and basically handle in splash or starting activity -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="google.com"
+                    android:scheme="https" />
+                <!-- for reference : you can pass pathPrefix too -->
+                <!--<data-->
+                <!--android:host="www.google.com"-->
+                <!--android:pathPrefix="/api/"-->
+                <!--android:scheme="https" />-->
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".cameraGallery.ImageCameraGalleryActivity" />
+
+        <activity android:name=".db.LocalDbActivity" />
+        <activity android:name=".fdb.FdbActivity" />
+
+        <activity android:name=".localization.LocalisationActivity" />
+        <activity android:name=".localization.LocalisationTestingActivity" />
+
+        <activity android:name=".locationDialog.LocationDialogUsageActivity" />
+
+        <activity android:name=".mapping.customGooglePlaces.CustomGooglePlacesActivity" />
+        <activity android:name=".mapping.mapCluster.MapClusterActivity" />
+        <activity android:name=".mapping.nearByPlaces.NearByPlacesActivity" />
+        <activity android:name=".mapping.MapWithPlacesActivity" />
+        <activity android:name=".mapping.MapActivity" />
+
+        <activity android:name=".payment.payTm.PayTmActivity" />
+        <activity android:name=".payment.paypal.PaypalActivity" />
+
+        <activity android:name=".qrCode.QrCodeGeneratorActivity" />
+        <activity android:name=".qrCode.QrCodeScannerActivity" />
+
+        <activity android:name=".socialLogin.FacebookLoginActivity" />
+        <activity android:name=".socialLogin.GmailLoginActivity" />
+        <activity android:name=".socialLogin.TwitterLoginActivity" />
+
+        <activity android:name=".countryCodePicker.CustomCountryCodePickerActivity" />
+
+        <activity android:name=".viewpagerUsage.ViewPagerUsageActivity" />
+
+        <activity android:name=".pagination.PaginationOneActivity" />
+
+        <activity android:name=".internetChecking.InternetCheckingActivity" />
+
+        <activity android:name=".pipMode.PiPModeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:launchMode="singleTask"
+            tools:targetApi="n" />
+
+        <!-- for image crop -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <!-- for fcm notification -->
+        <service android:name=".fcm.FcmListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- for location -->
+        <service android:name=".services.LocationService" />
+
+        <!-- for firebase live location tracking  -->
+        <service
+            android:name=".fcm.liveTracking.TrackerService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+
+        <!-- for continuous internet checking -->
+        <receiver
+            android:name=".internetChecking.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
+        <!-- google map -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_key" />
+
+        <!-- for facebook integration -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- for image picker from device or camera -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider_path"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+    </application>
+
+</manifest>
