@@ -298,6 +298,7 @@
                 android:text="Internet Checking with Service"
                 android:textColor="#000000"
                 android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/tvPiPMode"
                 android:layout_width="match_parent"
@@ -308,6 +309,71 @@
                 android:onClick="onClickEvent"
                 android:padding="15dp"
                 android:text="PiP Mode"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSimpleSwipeToDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round_radius"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Simple Swipe to Delete"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSwipeToDeleteOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round_radius"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Swipe To Delete With Button"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvParallaxScrolling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round_radius"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Parallax Scrolling"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvShowCase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round_radius"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Showcase View"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvBottomSheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_round_radius"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Bottom Sheet"
                 android:textColor="#000000"
                 android:textSize="16sp" />
         </LinearLayout>

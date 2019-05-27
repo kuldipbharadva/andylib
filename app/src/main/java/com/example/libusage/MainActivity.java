@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.libusage.bottomSheet.BottomSheetActivity;
 import com.example.libusage.cameraGallery.ImageCameraGalleryActivity;
 import com.example.libusage.countryCodePicker.CustomCountryCodePickerActivity;
 import com.example.libusage.db.LocalDbActivity;
 import com.example.libusage.deeplink.DeepLinkActivity;
-import com.example.libusage.fcm.liveTracking.LiveTrackPipModeActivity;
 import com.example.libusage.internetChecking.InternetCheckingActivity;
 import com.example.libusage.localization.LocalisationActivity;
 import com.example.libusage.locationDialog.LocationDialogUsageActivity;
@@ -21,11 +20,15 @@ import com.example.libusage.mapping.MapWithPlacesActivity;
 import com.example.libusage.mapping.customGooglePlaces.CustomGooglePlacesActivity;
 import com.example.libusage.mapping.mapCluster.MapClusterActivity;
 import com.example.libusage.mapping.nearByPlaces.NearByPlacesActivity;
+import com.example.libusage.parallaxScrolling.ParallaxScrollingActivity;
 import com.example.libusage.payment.payTm.PayTmActivity;
 import com.example.libusage.payment.paypal.PaypalActivity;
 import com.example.libusage.pipMode.PiPModeActivity;
 import com.example.libusage.qrCode.QrCodeGeneratorActivity;
 import com.example.libusage.qrCode.QrCodeScannerActivity;
+import com.example.libusage.recyclerView.simpleSwipeToDelete.SimpleSwipeToDeleteActivity;
+import com.example.libusage.recyclerView.swipeToDeleteOption.SwipeToDeleteOptionActivity;
+import com.example.libusage.showCaseView.ShowCaseViewUsageActivity;
 import com.example.libusage.socialLogin.FacebookLoginActivity;
 import com.example.libusage.socialLogin.GmailLoginActivity;
 import com.example.libusage.socialLogin.TwitterLoginActivity;
@@ -106,6 +109,21 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.tvPiPMode:
                 intentCall(PiPModeActivity.class);
+                break;
+            case R.id.tvSimpleSwipeToDelete:
+                intentCall(SimpleSwipeToDeleteActivity.class);
+                break;
+            case R.id.tvSwipeToDeleteOption:
+                intentCall(SwipeToDeleteOptionActivity.class);
+                break;
+            case R.id.tvParallaxScrolling:
+                intentCall(ParallaxScrollingActivity.class);
+                break;
+            case R.id.tvShowCase:
+                intentCall(ShowCaseViewUsageActivity.class);
+                break;
+            case R.id.tvBottomSheet:
+                intentCall(BottomSheetActivity.class);
                 break;
         }
     }
