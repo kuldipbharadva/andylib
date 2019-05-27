@@ -31,12 +31,7 @@ android {
             }
         }
     }
-//    buildTypes {
-//        release {
-//            minifyEnabled false
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-//        }
-//    }
+
     buildTypes {
         debug {
             buildConfigField "int", "DATABASE_VERSION", "1"
@@ -169,8 +164,16 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-}
 
+    /* for swipe to delete layout */
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+
+    /* for show-case view */
+    implementation 'me.toptas.fancyshowcase:fancyshowcaseview:1.1.5'
+
+    /* for bottom sheet layout */
+    implementation 'com.flipboard:bottomsheet-core:1.5.3'
+}
 
 // automatic code generation
 // Each configuration is set to the default value

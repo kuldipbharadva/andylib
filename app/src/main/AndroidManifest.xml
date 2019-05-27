@@ -88,6 +88,16 @@
 
         <activity android:name=".internetChecking.InternetCheckingActivity" />
 
+        <activity android:name=".recyclerView.simpleSwipeToDelete.SimpleSwipeToDeleteActivity" />
+        <activity android:name=".recyclerView.swipeToDeleteOption.SwipeToDeleteOptionActivity" />
+
+        <activity android:name=".parallaxScrolling.ParallaxScrollingActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <activity android:name=".showCaseView.ShowCaseViewUsageActivity" />
+
+        <activity android:name=".bottomSheet.BottomSheetActivity" />
+
         <activity android:name=".pipMode.PiPModeActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:resizeableActivity="true"
