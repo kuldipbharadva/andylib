@@ -93,7 +93,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation 'com.andylib:andylib:1.0.4'
+    implementation 'com.andylib:andylib:1.0.7'
 
     /* multiDex */
     implementation 'com.android.support:multidex:1.0.3'
@@ -173,6 +173,10 @@ dependencies {
 
     /* for bottom sheet layout */
     implementation 'com.flipboard:bottomsheet-core:1.5.3'
+
+    /* for real-m database */
+    implementation 'io.realm:realm-android:0.87.4'
+    annotationProcessor 'io.realm:realm-android:0.87.4'
 }
 
 // automatic code generation

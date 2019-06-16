@@ -2,6 +2,7 @@ package com.example.libusage;
 
 import android.app.Application;
 
+import com.example.libusage.dbRealm.RealmHelper;
 import com.example.libusage.internetChecking.ConnectivityReceiver;
 import com.facebook.FacebookSdk;
 
@@ -13,6 +14,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         FacebookSdk.sdkInitialize(getApplicationContext());
+        RealmHelper.getRealmInstance(getApplicationContext());
         mInstance = this;
     }
 
