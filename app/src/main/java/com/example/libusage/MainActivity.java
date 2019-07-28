@@ -11,6 +11,8 @@ import com.example.libusage.bottomSheet.BottomSheetActivity;
 import com.example.libusage.cameraGallery.ImageCameraGalleryActivity;
 import com.example.libusage.countryCodePicker.CustomCountryCodePickerActivity;
 import com.example.libusage.db.LocalDbActivity;
+import com.example.libusage.dbRealm.RealmActivity;
+import com.example.libusage.dbRoom.RoomActivity;
 import com.example.libusage.deeplink.DeepLinkActivity;
 import com.example.libusage.internetChecking.InternetCheckingActivity;
 import com.example.libusage.localization.LocalisationActivity;
@@ -49,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.tvLocalDatabase:
                 intentCall(LocalDbActivity.class);
+                break;
+            case R.id.tvRealmDb:
+                intentCall(RealmActivity.class);
+                break;
+            case R.id.tvRoomDb:
+                intentCall(RoomActivity.class);
                 break;
             case R.id.tvFirebaseDatabase:
                 Toast.makeText(MainActivity.this, "Need to setup your app with Firebase and then You can see how it's work.", Toast.LENGTH_SHORT).show();

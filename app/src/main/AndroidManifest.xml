@@ -57,6 +57,8 @@
         <activity android:name=".cameraGallery.ImageCameraGalleryActivity" />
 
         <activity android:name=".db.LocalDbActivity" />
+        <activity android:name=".dbRealm.RealmActivity" />
+        <activity android:name=".dbRoom.RoomActivity" />
         <activity android:name=".fdb.FdbActivity" />
 
         <activity android:name=".localization.LocalisationActivity" />

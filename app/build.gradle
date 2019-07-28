@@ -53,21 +53,21 @@ android {
 //            buildConfigField "boolean", "HAS_DEV_TOOLS", "true"
 //            buildConfigField "String", "API_URL", "\"https://apidev.snap2lead.com/v1_00\""
 //            resValue "string", "content_provider", "com.facebook.app.FacebookContentProvider505087873001818"
-            resValue "string", "app_name", "LibUsage"
+            resValue "string", "app_name", "Andy Github"
         }
         qa {
 //            applicationId "com.example.libusage"
 //            buildConfigField "boolean", "HAS_DEV_TOOLS", "true"
 //            buildConfigField "String", "API_URL", "\"https://apiqa.snap2lead.com/v1_00\""
 //            resValue "string", "content_provider", "com.facebook.app.FacebookContentProvider563745497136055"
-            resValue "string", "app_name", "LibUsage"
+            resValue "string", "app_name", "Andy Github"
         }
         production {
 //            applicationId "com.example.libusage"
 //            buildConfigField "boolean", "HAS_DEV_TOOLS", "false"
 //            buildConfigField "String", "API_URL", "\"https://api.snap2lead.com/v1_00\""
 //            resValue "string", "content_provider", "com.facebook.app.FacebookContentProvider505085249668747"
-            resValue "string", "app_name", "LibUsage"
+            resValue "string", "app_name", "Andy Github"
         }
     }
 
@@ -174,9 +174,14 @@ dependencies {
     /* for bottom sheet layout */
     implementation 'com.flipboard:bottomsheet-core:1.5.3'
 
-    /* for real-m database */
+    /* for realm database */
     implementation 'io.realm:realm-android:0.87.4'
     annotationProcessor 'io.realm:realm-android:0.87.4'
+
+    /* for room database */
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
 }
 
 // automatic code generation

@@ -12,7 +12,6 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath 'org.jsonschema2pojo:jsonschema2pojo-gradle-plugin:1.0.0-alpha2'
-
     }
 }
 
@@ -20,7 +19,13 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url 'https://maven.google.com' }
+    }
+
+    configurations.matching { it.name == '_internal_aapt2_binary' }.all { config ->
+        config.resolutionStrategy.eachDependency { details ->
+            details.useVersion("3.3.2-5309881")
+        }
     }
 }
 
