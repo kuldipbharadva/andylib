@@ -2,8 +2,10 @@ package com.example.libusage;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Toast;
 
@@ -14,6 +16,9 @@ import com.example.libusage.db.LocalDbActivity;
 import com.example.libusage.dbRealm.RealmActivity;
 import com.example.libusage.dbRoom.RoomActivity;
 import com.example.libusage.deeplink.DeepLinkActivity;
+import com.example.libusage.drawerUse.DrawerActivity;
+import com.example.libusage.imagePickFromGalleryMultiple.ImagePickerActivity;
+import com.example.libusage.imagePickerLikeWhatsapp.WhatsAppImgPickerActivity;
 import com.example.libusage.internetChecking.InternetCheckingActivity;
 import com.example.libusage.localization.LocalisationActivity;
 import com.example.libusage.locationDialog.LocationDialogUsageActivity;
@@ -34,6 +39,7 @@ import com.example.libusage.showCaseView.ShowCaseViewUsageActivity;
 import com.example.libusage.socialLogin.FacebookLoginActivity;
 import com.example.libusage.socialLogin.GmailLoginActivity;
 import com.example.libusage.socialLogin.TwitterLoginActivity;
+import com.example.libusage.viewPagerCustomTab.MyCustomTabActivity;
 import com.example.libusage.viewpagerUsage.ViewPagerUsageActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,6 +52,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickEvent(View v) {
         switch (v.getId()) {
+            case R.id.tvDrawerUse:
+                intentCall(DrawerActivity.class);
+                break;
+            case R.id.tvWhatsAppPicker:
+                intentCall(WhatsAppImgPickerActivity.class);
+                break;
+            case R.id.tvMultiImgSelection:
+                intentCall(ImagePickerActivity.class);
+                break;
+            case R.id.tvViewPagerCustomTab:
+                intentCall(MyCustomTabActivity.class);
+                break;
             case R.id.tvCameraGallery:
                 intentCall(ImageCameraGalleryActivity.class);
                 break;

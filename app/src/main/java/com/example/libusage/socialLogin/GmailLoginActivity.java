@@ -2,8 +2,8 @@ package com.example.libusage.socialLogin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.andylib.socialLogin.GoogleLogin;
 import com.andylib.socialLogin.SocialItem;

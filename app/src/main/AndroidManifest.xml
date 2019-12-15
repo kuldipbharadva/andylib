@@ -93,18 +93,28 @@
         <activity android:name=".recyclerView.simpleSwipeToDelete.SimpleSwipeToDeleteActivity" />
         <activity android:name=".recyclerView.swipeToDeleteOption.SwipeToDeleteOptionActivity" />
 
-        <activity android:name=".parallaxScrolling.ParallaxScrollingActivity"
+        <activity
+            android:name=".parallaxScrolling.ParallaxScrollingActivity"
             android:theme="@style/AppThemeNoActionBar" />
 
         <activity android:name=".showCaseView.ShowCaseViewUsageActivity" />
 
         <activity android:name=".bottomSheet.BottomSheetActivity" />
 
-        <activity android:name=".pipMode.PiPModeActivity"
+        <activity android:name=".viewPagerCustomTab.MyCustomTabActivity" />
+
+        <activity android:name=".imagePickFromGalleryMultiple.ImagePickerActivity" />
+
+        <activity android:name=".imagePickerLikeWhatsapp.WhatsAppImgPickerActivity" />
+
+        <activity android:name=".drawerUse.DrawerActivity" />
+
+        <activity
+            android:name=".pipMode.PiPModeActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
             android:resizeableActivity="true"
             android:supportsPictureInPicture="true"
-            android:launchMode="singleTask"
             tools:targetApi="n" />
 
         <!-- for image crop -->
@@ -155,7 +165,7 @@
 
         <!-- for image picker from device or camera -->
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider_path"
             android:exported="false"
             android:grantUriPermissions="true">

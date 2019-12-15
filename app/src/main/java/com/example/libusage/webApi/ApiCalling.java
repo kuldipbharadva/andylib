@@ -6,7 +6,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -18,6 +17,7 @@ import com.example.libusage.R;
 import java.io.IOException;
 import java.util.Map;
 
+import io.reactivex.annotations.NonNull;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

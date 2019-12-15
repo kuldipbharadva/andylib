@@ -28,10 +28,62 @@
             android:padding="10dp">
 
             <TextView
+                android:id="@+id/tvDrawerUse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_radius"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Drawer View"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvWhatsAppPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_radius"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="WhatsApp Image Selection"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMultiImgSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_radius"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Multiple Image Selection"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvViewPagerCustomTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_radius"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="ViewPager Custom Tab BG"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/tvCameraGallery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_round_radius"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:onClick="onClickEvent"
                 android:padding="15dp"
