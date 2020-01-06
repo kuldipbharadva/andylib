@@ -1,6 +1,7 @@
 package com.example.libusage.utilities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -51,6 +52,32 @@ public class CustomDialog {
                 progressDialog.dismiss();
             }
         }
+    }
+
+    public static void alertDialogSingleClick(Context context, int icon, String title, String message, boolean cancelable, String btnText, int buttonColor, final SingleClickDialogInterface singleClickDialogInterface) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setIcon(icon);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setCancelable(cancelable);
+        builder.setPositiveButton(btnText, (dialog, which) -> singleClickDialogInterface.onClicked());
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(context.getResources().getColor(buttonColor));
+    }
+
+    public static void alertDialogDoubleClick(Context context, int icon, String title, String message, boolean cancelable, String positiveText, String negativeText, int positiveTextColor, int negativeTextColor, final DoubleClickDialogInterface doubleClickDialogInterface) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setIcon(icon);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setCancelable(cancelable);
+        builder.setPositiveButton(positiveText, (dialog, which) -> doubleClickDialogInterface.setPositiveClicked());
+        builder.setNegativeButton(negativeText, (dialog, which) -> doubleClickDialogInterface.setNegativeClicked());
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(context.getResources().getColor(positiveTextColor));
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(context.getResources().getColor(negativeTextColor));
     }
 
     public static void customDialog(Context context, Dialog dialog, final int view, int positiveButtonId, boolean cancelable, int height, final NoInterNetDialogInterface customDialogInterface) {
@@ -119,5 +146,16 @@ public class CustomDialog {
 
         void onOkClicked(Dialog dialog, View view);
 
+    }
+
+    public interface DoubleClickDialogInterface {
+
+        void setPositiveClicked();
+
+        void setNegativeClicked();
+    }
+
+    public interface SingleClickDialogInterface {
+        void onClicked();
     }
 }

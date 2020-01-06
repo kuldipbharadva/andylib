@@ -109,6 +109,8 @@
 
         <activity android:name=".drawerUse.DrawerActivity" />
 
+        <activity android:name=".exoplayerUse.VideoPlayerActivity" />
+
         <activity
             android:name=".pipMode.PiPModeActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"

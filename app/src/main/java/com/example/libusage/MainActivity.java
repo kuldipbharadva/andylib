@@ -17,6 +17,7 @@ import com.example.libusage.dbRealm.RealmActivity;
 import com.example.libusage.dbRoom.RoomActivity;
 import com.example.libusage.deeplink.DeepLinkActivity;
 import com.example.libusage.drawerUse.DrawerActivity;
+import com.example.libusage.exoplayerUse.VideoPlayerActivity;
 import com.example.libusage.imagePickFromGalleryMultiple.ImagePickerActivity;
 import com.example.libusage.imagePickerLikeWhatsapp.WhatsAppImgPickerActivity;
 import com.example.libusage.internetChecking.InternetCheckingActivity;
@@ -57,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.tvWhatsAppPicker:
                 intentCall(WhatsAppImgPickerActivity.class);
+                break;
+            case R.id.tvExoPlayer:
+                intentCall(VideoPlayerActivity.class);
                 break;
             case R.id.tvMultiImgSelection:
                 intentCall(ImagePickerActivity.class);

@@ -202,6 +202,11 @@ dependencies {
     /* like whatsapp image picker  */
     implementation  'com.fxn769:pix:1.4.4'
 
+    /* exo player */
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.4'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.4'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.4'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.4'
 }
 
 // automatic code generation
