@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+
 import com.andylib.dialog.CustomDialog;
 import com.andylib.snackbar.TSnackbar;
 import com.example.libusage.R;
@@ -89,17 +91,19 @@ public class ApiCalling {
                     dialog = new Dialog(context, R.style.dialog_full_screen);
                     CustomDialog.noInternetDialog(context, dialog, R.layout.dialog_no_internet, R.id.ok, false, CustomDialog.CustomDialogInterface.match_parent, new CustomDialog.NoInterNetDialogInterface() {
                         @Override
-                        public void onOkClicked(Dialog dialog, View view) {
+                        public void onOkClicked(Dialog d, View view) {
                             if (isNetworkAvailable(context))
                                 if (dialog.isShowing()) dialog.dismiss();
                             ApiCalling.makeApiCall(context, url, method, headerMap, requestBody, true, new ApiSuccessInterface() {
                                 @Override
                                 public void onSuccess(int resCode, String resMsg, String apiResponse) {
+                                    dialog = null;
                                     apiSuccessInterface.onSuccess(resCode, resMsg, apiResponse);
                                 }
 
                                 @Override
                                 public void onFailure(Throwable t) {
+                                    dialog = null;
                                     apiSuccessInterface.onFailure(t);
                                 }
                             });
