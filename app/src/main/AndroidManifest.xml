@@ -20,6 +20,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -119,6 +120,12 @@
             android:supportsPictureInPicture="true"
             tools:targetApi="n" />
 
+        <activity android:name=".lottie.LottieAnimationActivity" />
+
+        <activity android:name=".ads.GoogleAdsActivity" />
+        <activity android:name=".ads.FacebookAdsActivity"
+            android:hardwareAccelerated="true"/>
+
         <!-- for image crop -->
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
@@ -176,6 +183,11 @@
                 android:resource="@xml/provider_path" />
         </provider>
 
+        <!-- for google ads -->
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 
 </manifest>

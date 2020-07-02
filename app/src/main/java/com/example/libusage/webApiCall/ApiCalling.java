@@ -108,7 +108,7 @@ public class ApiCalling {
                     dialog = new Dialog(context, R.style.dialog_full_screen);
                     CustomDialog.noInternetDialog(context, dialog, R.layout.dialog_no_internet, R.id.ok, false, CustomDialog.CustomDialogInterface.match_parent, new CustomDialog.NoInterNetDialogInterface() {
                         @Override
-                        public void onOkClicked(Dialog dialog, View view) {
+                        public void onOkClicked(Dialog d, View view) {
                             if (NetworkCheck.isNetworkAvailable(context))
                                 if (dialog.isShowing()) dialog.dismiss();
                             ApiCalling.makeApiCall(context, url, method, headerMap, requestBody, true, new ApiSuccessInterface() {

@@ -6,7 +6,7 @@ public class Instruction {
      *   Package : SimpleSwipeToDelete
      *
      *   SimpleSwipeToDeleteActivity show simple list.
-     *   SwipeToDeleteCallback class used to delete row of list when user swipe.
+     *   SwipeToDeleteCallback class used to delete row_pagination_item of list when user swipe.
      *   Also have feature method of removeItem and restoreItem which we deleted, Functionality of undo deleted record.
      *
      *

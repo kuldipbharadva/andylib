@@ -144,7 +144,7 @@ public class CustomDialog {
         int wrap_content=0;
         int match_parent=1;
 
-        void onOkClicked(Dialog dialog, View view);
+        void onOkClicked(Dialog d, View view);
 
     }
 

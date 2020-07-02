@@ -5,6 +5,7 @@ import android.app.Application;
 import com.example.libusage.dbRealm.RealmHelper;
 import com.example.libusage.internetChecking.ConnectivityReceiver;
 import com.facebook.FacebookSdk;
+import com.facebook.ads.AudienceNetworkAds;
 
 public class MyApplication extends Application {
 
@@ -15,6 +16,10 @@ public class MyApplication extends Application {
         super.onCreate();
         FacebookSdk.sdkInitialize(getApplicationContext());
         RealmHelper.getRealmInstance(getApplicationContext());
+
+        // Initialize the Audience Network SDK for facebook ads
+        AudienceNetworkAds.initialize(this);
+
         mInstance = this;
     }
 

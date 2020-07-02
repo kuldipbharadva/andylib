@@ -46,7 +46,7 @@ public class Instruction {
     *
     *   TODO: Map Styling Usage instruction
     *   You can do map styling.
-    *   You just need to map json file to put in row folder and used in in map.
+    *   You just need to map json file to put in row_pagination_item folder and used in in map.
     *   TODO: mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(MapActivity.this, R.raw.map));
     *   Just put this line in onMapReady() method to map styling
     *   You can change road, highway, park etc color on map for that you just need to modify json file

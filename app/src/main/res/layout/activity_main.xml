@@ -40,6 +40,45 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tvGoogleAds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_radius"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Google Ads"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvFacebookAds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_radius"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Facebook Ads"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvLottieAnim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_radius"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:onClick="onClickEvent"
+                android:padding="15dp"
+                android:text="Lottie Animation"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
                 android:id="@+id/tvExoPlayer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

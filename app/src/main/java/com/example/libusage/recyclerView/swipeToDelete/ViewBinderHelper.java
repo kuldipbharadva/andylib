@@ -139,7 +139,7 @@ public class ViewBinderHelper {
     }
 
     /**
-     * @param openOnlyOne If set to true, then only one row can be opened at a time.
+     * @param openOnlyOne If set to true, then only one row_pagination_item can be opened at a time.
      */
     public void setOpenOnlyOne(boolean openOnlyOne) {
         this.openOnlyOne = openOnlyOne;

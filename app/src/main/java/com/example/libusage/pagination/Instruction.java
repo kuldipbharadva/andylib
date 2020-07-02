@@ -17,5 +17,9 @@ public class Instruction {
     *
     *  PaginationTwoActivity: The another way is to manage pagination using like this in this activity.
     *  You can use SuperRecyclerView for listing in XML.
+    *
+    *
+    *  PG package :
+    *  You just have to create your adapter like 'RecyclerAdapter' and just check MyPaginationActivity code and pagination is on your hand.
     */
 }

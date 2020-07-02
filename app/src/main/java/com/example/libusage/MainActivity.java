@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.libusage.ads.FacebookAdsActivity;
+import com.example.libusage.ads.GoogleAdsActivity;
 import com.example.libusage.bottomSheet.BottomSheetActivity;
 import com.example.libusage.cameraGallery.ImageCameraGalleryActivity;
 import com.example.libusage.countryCodePicker.CustomCountryCodePickerActivity;
@@ -23,6 +25,7 @@ import com.example.libusage.imagePickerLikeWhatsapp.WhatsAppImgPickerActivity;
 import com.example.libusage.internetChecking.InternetCheckingActivity;
 import com.example.libusage.localization.LocalisationActivity;
 import com.example.libusage.locationDialog.LocationDialogUsageActivity;
+import com.example.libusage.lottie.LottieAnimationActivity;
 import com.example.libusage.mapping.MapActivity;
 import com.example.libusage.mapping.MapWithPlacesActivity;
 import com.example.libusage.mapping.customGooglePlaces.CustomGooglePlacesActivity;
@@ -58,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.tvWhatsAppPicker:
                 intentCall(WhatsAppImgPickerActivity.class);
+                break;
+            case R.id.tvGoogleAds:
+                intentCall(GoogleAdsActivity.class);
+                break;
+            case R.id.tvFacebookAds:
+                intentCall(FacebookAdsActivity.class);
+                break;
+            case R.id.tvLottieAnim:
+                intentCall(LottieAnimationActivity.class);
                 break;
             case R.id.tvExoPlayer:
                 intentCall(VideoPlayerActivity.class);

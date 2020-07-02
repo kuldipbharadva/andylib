@@ -19,7 +19,6 @@ import com.example.libusage.R;
 import java.io.IOException;
 import java.util.Map;
 
-import io.reactivex.annotations.NonNull;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -40,7 +40,7 @@ public class DatabaseHelper {
 
     }
 
-    //this method returns the id of the newly created row and returns -1 on insert none record
+    //this method returns the id of the newly created row_pagination_item and returns -1 on insert none record
     //insert() of sqlite returns inserted record id
     public long insert(String tableName, ArrayList<String> columnsNames, ArrayList columnValues) {
         try {
