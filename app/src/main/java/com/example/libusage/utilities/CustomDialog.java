@@ -80,6 +80,22 @@ public class CustomDialog {
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(context.getResources().getColor(negativeTextColor));
     }
 
+    public static void customDialog(Context context, Dialog dialog, final int view, boolean cancelable, int height) {
+        final View viewLayout=LayoutInflater.from(context).inflate(view, null);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(viewLayout);
+        if (height == CustomDialogInterface.wrap_content) {
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        } else if (height == CustomDialogInterface.match_parent) {
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        }
+        dialog.setCancelable(cancelable);
+        ColorDrawable back=new ColorDrawable(Color.TRANSPARENT);
+        InsetDrawable inset=new InsetDrawable(back, 20);
+        dialog.getWindow().setBackgroundDrawable(inset);
+        dialog.show();
+    }
+
     public static void customDialog(Context context, Dialog dialog, final int view, int positiveButtonId, boolean cancelable, int height, final NoInterNetDialogInterface customDialogInterface) {
         final View viewLayout=LayoutInflater.from(context).inflate(view, null);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -145,7 +161,6 @@ public class CustomDialog {
         int match_parent=1;
 
         void onOkClicked(Dialog d, View view);
-
     }
 
     public interface DoubleClickDialogInterface {
