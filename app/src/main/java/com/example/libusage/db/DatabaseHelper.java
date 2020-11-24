@@ -11,16 +11,13 @@ import java.util.ArrayList;
 
 public class DatabaseHelper {
 
-
     private MySQLiteHelper dbHelper;
     private SQLiteDatabase sqLiteDatabase;
-
 
     public DatabaseHelper(Context context) {
         dbHelper = new MySQLiteHelper(context);
         sqLiteDatabase = dbHelper.getWritableDatabase();
     }
-
 
     public void openDatabase() throws SQLException {
         sqLiteDatabase = dbHelper.getWritableDatabase();
@@ -30,14 +27,13 @@ public class DatabaseHelper {
         dbHelper.close();
     }
 
-    public void creatTbl(String tableName,ArrayList<String> columnsNames, ArrayList columnType){
+    public void creatTbl(String tableName, ArrayList<String> columnsNames, ArrayList columnType) {
         String prepareQuery = "";
         for (int i = 0; i < columnsNames.size(); i++) {
-            prepareQuery += columnsNames.get(i) + " "+columnType.get(i)+", ";
+            prepareQuery += columnsNames.get(i) + " " + columnType.get(i) + ", ";
         }
-        String createTbl = "CREATE TABLE IF NOT EXISTS " + tableName + " ("+prepareQuery.substring(0,prepareQuery.length()-2)+");";
+        String createTbl = "CREATE TABLE IF NOT EXISTS " + tableName + " (" + prepareQuery.substring(0, prepareQuery.length() - 2) + ");";
         sqLiteDatabase.execSQL(createTbl);
-
     }
 
     //this method returns the id of the newly created row_pagination_item and returns -1 on insert none record
@@ -184,7 +180,7 @@ public class DatabaseHelper {
         Cursor c = sqLiteDatabase.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null);
         ArrayList<String> tName = new ArrayList<>();
         if (c.moveToFirst()) {
-            while ( !c.isAfterLast() ) {
+            while (!c.isAfterLast()) {
                 tName.add(c.getString(0));
                 c.moveToNext();
             }

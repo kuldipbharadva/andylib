@@ -3,6 +3,8 @@ package com.example.libusage.utilities;
 import android.content.Context;
 import android.widget.EditText;
 
+import java.util.regex.Pattern;
+
 public class Validations {
 
     public static boolean isShowSnackBar = true;
@@ -46,7 +48,34 @@ public class Validations {
         }
     }
 
-    public static boolean isValidEmail(Context context, String msg, int snackBarPosition, EditText editText) {
+    public static boolean isValidNumberDecimal(Context context, EditText editText, String msg, int snackBarPosition) {
+        if (editText.getText().toString().trim().equals(".") || editText.getText().toString().trim().equals(",")) {
+            MySnackbar.showSnackbar(context, msg, MySnackbar.SnackbarPosition.TOP, MySnackbar.SnackbarType.FAILED);
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isValueGreaterThanZero(Context context, EditText editText, String msg, int snackBarPosition) {
+        if (Double.parseDouble(editText.getText().toString().trim()) <= 0) {
+            MySnackbar.showSnackbar(context, msg, MySnackbar.SnackbarPosition.TOP, MySnackbar.SnackbarType.FAILED);
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isValidateSpecialChar(Context context, EditText editText, String msg, int snackBarPosition) {
+        String text = editText.getText().toString().trim();
+        //Pattern regex = Pattern.compile("[$&+,:;=\\\\?@#|/'<>.^*()%!]");
+        Pattern regex = Pattern.compile("[$&+:;=\\\\?@#|/'<>^*()%!]");
+        if (regex.matcher(text).find()) {
+            showSnackBar(context, msg, snackBarPosition);
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isValidEmail(Context context, EditText editText, String msg, int snackBarPosition) {
         if (!(editText.getText().toString().trim().toLowerCase()
                 .matches("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"))) {
             showSnackBar(context, msg, snackBarPosition);

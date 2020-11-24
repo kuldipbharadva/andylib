@@ -17,7 +17,7 @@ public class Instruction {
                 android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
                 android:theme="@style/Base.Theme.AppCompat" />
     *
-    * Then you need to add ImageSelectorFunctions in your app.
+    * Then you need to add ImageSelectorFunctions class in your app.
     * And call this class on click of select button for pick or capture image like
     * TODO ImageSelectorFunctions.getImageUploadInstance().openSelectionDialog(context)
     *

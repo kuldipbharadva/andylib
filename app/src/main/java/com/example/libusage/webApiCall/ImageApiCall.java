@@ -8,6 +8,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import com.example.libusage.utilities.Functions;
+import com.example.libusage.utilities.GetRealPath;
 
 import java.io.File;
 
@@ -22,11 +23,11 @@ import retrofit2.Response;
 public class ImageApiCall {
 
     /* this function call image upload api */
-    public void apiCallImageUpload(Context context) {
+    public void apiCallImageUpload(Context context,  Uri imgUri) {
         File file = null;
-        Uri imgUri = null;
+        //Uri imgUri = null;
         if (imgUri != null) {
-            String filePath = Functions.getRealPathFromUri(context, imgUri);
+            String filePath = GetRealPath.getRealPathFromUri(context, imgUri);
             if (filePath != null && !filePath.isEmpty()) {
                 file = new File(filePath);
             }

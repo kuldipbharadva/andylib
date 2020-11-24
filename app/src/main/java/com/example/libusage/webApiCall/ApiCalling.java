@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -28,6 +29,7 @@ public class ApiCalling {
     private static Call call;
     private static Dialog dialog;
     private static String TAG = "apiCalling";
+    private static Toast toast;
 
     public static void makeApiCall(final Context context, final String url, final String method, final Map headerMap, final Object requestBody, final boolean isProgressDialogNeeded, final ApiSuccessInterface apiSuccessInterface) {
         Log.d(TAG, "makeApiCall: request :: " + new Gson().toJson(requestBody));
@@ -37,10 +39,12 @@ public class ApiCalling {
             if (NetworkCheck.isNetworkAvailable(context)) {
                 try {
                     if (isProgressDialogNeeded) {
+                        if (dialog != null) {
+                            dialog = null;
+                        }
                         dialog = ProgressDialog.show(context, "", context.getString(R.string.please_wait));
                         dialog.setCancelable(false);
                         dialog.show();
-//                        CustomDialog.displayProgress(context);
                     }
                 } catch (Exception e) {
                     e.getLocalizedMessage();
@@ -68,6 +72,7 @@ public class ApiCalling {
 
                                 if (dialog != null && dialog.isShowing()) {
                                     dialog.dismiss();
+                                    dialog = null;
                                 }
                             }
                         } catch (Exception e) {
@@ -94,9 +99,9 @@ public class ApiCalling {
                         Log.d(TAG, "onFailure: api failed :: " + t.getLocalizedMessage());
                         try {
                             if (isProgressDialogNeeded) {
-//                                CustomDialog.dismissProgress(context);
                                 if (dialog != null && dialog.isShowing()) {
                                     dialog.dismiss();
+                                    dialog = null;
                                 }
                             }
 
@@ -113,20 +118,28 @@ public class ApiCalling {
                     CustomDialog.noInternetDialog(context, dialog, R.layout.dialog_no_internet, R.id.ok, false, CustomDialog.CustomDialogInterface.match_parent, new CustomDialog.NoInterNetDialogInterface() {
                         @Override
                         public void onOkClicked(Dialog d, View view) {
-                            if (NetworkCheck.isNetworkAvailable(context))
+                            if (NetworkCheck.isNetworkAvailable(context)) {
                                 if (dialog.isShowing()) dialog.dismiss();
-                            ApiCalling.makeApiCall(context, url, method, headerMap, requestBody, true, new ApiSuccessInterface() {
-                                @Override
-                                public void onSuccess(int resCode, String resMsg, String apiResponse) {
-                                    apiSuccessInterface.onSuccess(resCode, resMsg, apiResponse);
-                                    Log.d(TAG, "apiCall no network");
-                                }
+                                dialog = null;
+                                ApiCalling.makeApiCall(context, url, method, headerMap, requestBody, true, new ApiSuccessInterface() {
+                                    @Override
+                                    public void onSuccess(int resCode, String resMsg, String apiResponse) {
+                                        apiSuccessInterface.onSuccess(resCode, resMsg, apiResponse);
+                                        Log.d(TAG, "apiCall no network");
+                                    }
 
-                                @Override
-                                public void onFailure(Throwable t) {
-                                    apiSuccessInterface.onFailure(t);
+                                    @Override
+                                    public void onFailure(Throwable t) {
+                                        apiSuccessInterface.onFailure(t);
+                                    }
+                                });
+                            } else {
+                                if (toast != null) {
+                                    toast.cancel();
                                 }
-                            });
+                                toast = Toast.makeText(context, "Please check you internet connection!", Toast.LENGTH_SHORT);
+                                toast.show();
+                            }
                         }
                     });
                 }
@@ -145,6 +158,9 @@ public class ApiCalling {
             if (NetworkCheck.isNetworkAvailable(context)) {
                 try {
                     if (isProgressDialogNeeded) {
+                        if (dialog != null) {
+                            dialog = null;
+                        }
                         dialog = ProgressDialog.show(context, "", context.getString(R.string.please_wait));
                         dialog.setCancelable(false);
                         dialog.show();
@@ -173,6 +189,7 @@ public class ApiCalling {
                             if (isProgressDialogNeeded) {
                                 if (dialog != null && dialog.isShowing()) {
                                     dialog.dismiss();
+                                    dialog = null;
                                 }
                             }
                         } catch (Exception e) {
@@ -197,6 +214,7 @@ public class ApiCalling {
                             if (isProgressDialogNeeded) {
                                 if (dialog != null && dialog.isShowing()) {
                                     dialog.dismiss();
+                                    dialog = null;
                                 }
                             }
 
@@ -213,20 +231,29 @@ public class ApiCalling {
                     CustomDialog.noInternetDialog(context, dialog, R.layout.dialog_no_internet, R.id.ok, false, CustomDialog.CustomDialogInterface.match_parent, new CustomDialog.NoInterNetDialogInterface() {
                         @Override
                         public void onOkClicked(Dialog d, View view) {
-                            if (NetworkCheck.isNetworkAvailable(context))
+                            if (NetworkCheck.isNetworkAvailable(context)) {
                                 if (dialog.isShowing()) dialog.dismiss();
-                            ApiCalling.makeApiCall(context, url, method, headerMap, requestBody, isProgressDialogNeeded, isGetResponse, new ApiSuccessInterface() {
-                                @Override
-                                public void onSuccess(int resCode, String resMsg, String apiResponse) {
-                                    apiSuccessInterface.onSuccess(resCode, resMsg, apiResponse);
-                                    Log.d(TAG, "apiCall no network");
-                                }
+                                dialog = null;
 
-                                @Override
-                                public void onFailure(Throwable t) {
-                                    apiSuccessInterface.onFailure(t);
+                                ApiCalling.makeApiCall(context, url, method, headerMap, requestBody, isProgressDialogNeeded, isGetResponse, new ApiSuccessInterface() {
+                                    @Override
+                                    public void onSuccess(int resCode, String resMsg, String apiResponse) {
+                                        apiSuccessInterface.onSuccess(resCode, resMsg, apiResponse);
+                                        Log.d(TAG, "apiCall no network");
+                                    }
+
+                                    @Override
+                                    public void onFailure(Throwable t) {
+                                        apiSuccessInterface.onFailure(t);
+                                    }
+                                });
+                            } else {
+                                if (toast != null) {
+                                    toast.cancel();
                                 }
-                            });
+                                toast = Toast.makeText(context, "Please check you internet connection!", Toast.LENGTH_SHORT);
+                                toast.show();
+                            }
                         }
                     });
                 }
